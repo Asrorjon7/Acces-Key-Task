@@ -14,12 +14,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.UUID;
 import java.util.function.Function;
-
 @Service
 @AllArgsConstructor
 @Log4j2
 public class AccessKeyProviderService {
-
     private static final Function<UUID, String> DESCRIPTION_GENERATOR = uuid ->
             String.format("Created by KEY-ACTIVATOR. Template id: %s", Base64Util.toBase64(uuid.toString()));
 
